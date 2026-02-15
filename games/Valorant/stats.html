@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Stats</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico"/>
+</head>
+
+<body>
+
+  <!-- HEADER (Same as Index) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand-dot"></span>
+        Rensora - Valorant
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <section class="game-hero glass">
+
+      <h1 class="glossy-title">Competitive Stats</h1>
+
+      <!-- RANK DISPLAY -->
+      <div id="valorant-rank">
+
+ <!-- CURRENT RANK -->
+<div id="current-section">
+
+  <img id="rank-image" src="" alt="Current Rank">
+
+  <!-- Rank Name (now under image) -->
+  <div id="current-rank">Loading...</div>
+
+  <!-- RR Value -->
+  <div id="current-rr">0 / 100 RR</div>
+
+  <!-- Last Game MMR Change -->
+  <div id="last-mmr">+0</div>
+
+</div>
+
+
+        <!-- PEAK RANK (STATIC) -->
+        <div id="peak-section">
+          <img id="peak-image"
+               src="https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/13/largeicon.png"
+               alt="Peak Rank">
+
+          <div id="peak-rank">
+  <div class="peak-name">Gold 2</div>
+          <div id="rr">
+  <div class="peak-rr">56 / 100 RR</div>
+</div>
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- BACK BUTTON -->
+      <div class="back-row">
+        <a href="../../index.html" class="glow-btn link-btn">⬅ Back to Main</a>
+        <a href="https://tracker.gg/valorant/profile/riot/Rensora%23CRKD/overview?platform=pc&playlist=competitive" class="glow-btn link-btn">➡ More Stats ...</a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+<script>
+async function fetchValorantRank() {
+  const username = "Rensora";
+  const tag = "Void";
+  const apiKey = "HDEV-9ec4ec18-52a4-4b74-a84c-b5caed0cde2f";
+
+  const url = `https://api.henrikdev.xyz/valorant/v2/mmr/eu/${username}/${tag}?api_key=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("API request failed");
+
+    const data = await response.json();
+
+    const currentTier = data.data.current_data.currenttierpatched || "Unknown";
+    const rankingInTier = data.data.current_data.ranking_in_tier || 0;
+    const mmrChange = data.data.current_data.mmr_change_to_last_game || 0;
+    const rankImage = data.data.current_data.images.large || "";
+
+    document.getElementById("current-rank").textContent = currentTier;
+    document.getElementById("rank-image").src = rankImage;
+    document.getElementById("current-rr").textContent = rankingInTier + " / 100 RR";
+    document.getElementById("last-mmr").textContent =
+      mmrChange >= 0 ? "+" + mmrChange : mmrChange;
+
+  } catch (error) {
+    console.error("Error fetching rank:", error);
+    document.getElementById("current-rank").textContent = "Error loading rank";
+  }
+}
+
+fetchValorantRank();
+</script>
+
+</body>
+</html>
