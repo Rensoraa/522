@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rensora's Central Hub</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/c.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- General metadata -->
+  <meta name="title" content="Rensora's Central Hub" />
+  <meta name="description" content="All of Rensora's P100s, showcased in one place." />
+  <meta name="author" content="Rensora" />
+  <meta name="theme-color" content="#ff0055" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rensora's Central Hub" />
+  <meta property="og:description" content="The central hub for all of Rensora's projects." />
+  <meta property="og:image" content="https://i.imgur.com/4tS7i7T.jpeg" />
+  <meta property="og:url" content="https://rensoraa.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <!-- ── LOADER ── -->
+  <div id="loader">
+    <div class="loader-particles" id="loaderParticles"></div>
+    <div class="loader-logo">Rensora</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-text">Loading Hub</div>
+  </div>
+
+  <!-- ── BACKGROUND ── -->
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+  <div class="aurora aurora-3"></div>
+  <div class="grid-overlay"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        Rensora - Main
+      </a>
+      <nav class="menu">
+        <a class="menu-link" href="Salt">Salt Farm</a>
+        <a class="menu-link" href="Prestige-Goals">Goals</a>
+        <a class="menu-link" href="p100">P100</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── MAIN ── -->
+  <main class="page-wrap">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="glass card-hero">
+        <span class="hero-tag">Central Hub</span>
+        <h1 class="glossy-title">Welcome</h1>
+        <p class="desc">You just arrived in the Central Hub. Here you'll find my PC specs, the games I'm playing most right now, and links to all my other projects - in one place.</p>
+        <div class="button-row">
+          <a class="glow-btn link-btn" href="https://steamcommunity.com/id/rensora/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-steam"></i> Steam
+          </a>
+          <a class="glow-btn link-btn" href="https://x.com/Rensora__" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i> X
+          </a>
+          <a class="glow-btn link-btn" href="https://discord.com/users/929521121475313804" target="_blank" rel="noopener">
+            <i class="fa-brands fa-discord"></i> Discord
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="glass">
+        <h2 class="section-title">About Me</h2>
+        <div class="two-col">
+          <div class="about-blob">
+            <h3>Who I Am</h3>
+            <p>I'm Rensora - a gamer at heart, 23 years old. I have a passion for FPS games, but I also love a good open-world adventure. Always down to try something new.</p>
+          </div>
+          <div class="about-blob">
+            <h3>What I'm Into</h3>
+            <p>• Playing games - DBD, Valo, ESO<br>• Trying new things: food, drinks, music<br>• Chatting and goofing around with friends</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specs -->
+    <section id="specs" class="section">
+      <div class="glass">
+        <h2 class="section-title">Specs</h2>
+        <p class="section-desc">My full PC build. Click any card to see more details.</p>
+        <div class="specs-gallery">
+          <div class="spec-card">
+            <a href="https://www.amazon.com/AMD-Ryzen-5600X-12-Thread-Processor/dp/B08166SLDF" target="_blank" rel="noopener">
+              <img src="assets/specs/cpu.png" alt="Ryzen 5 5600X">
+              <p>CPU - Ryzen 5 5600X</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://www.amazon.com/MSI-MAG-B550-TOMAHAWK-Motherboard/dp/B089CWDHFZ" target="_blank" rel="noopener">
+              <img src="assets/specs/motherboard.png" alt="MSI B550 Gaming Plus">
+              <p>Motherboard — MSI MPG B550 Gaming Plus</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://www.amazon.com/ASUS-GeForce-DisplayPort-Axial-tech-Technology/dp/B0D6CYLHW1" target="_blank" rel="noopener">
+              <img src="assets/specs/gpu.png" alt="RTX 4060">
+              <p>GPU — RTX 4060</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://www.amazon.com/MSI-A850GL-Gaming-Power-Supply/dp/B0CB9MSJ5N" target="_blank" rel="noopener">
+              <img src="assets/specs/psu.png" alt="MSI MAG A850GL">
+              <p>PSU — MSI MAG A850GL 850W</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://www.megekko.nl/product/2046/1085520" target="_blank" rel="noopener">
+              <img src="assets/specs/ram.png" alt="G-Skill RAM">
+              <p>RAM — G-Skill 16GB DDR4 3200</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://en.sharkoon.com/product/41985" target="_blank" rel="noopener">
+              <img src="assets/specs/fan.png" alt="Sharkoon A40">
+              <p>Cooling — Sharkoon A40</p>
+            </a>
+          </div>
+          <div class="spec-card">
+            <a href="https://en.sharkoon.com/product/38220" target="_blank" rel="noopener">
+              <img src="assets/specs/case.png" alt="Sharkoon Rebel C50">
+              <p>Case — Sharkoon Rebel C50</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games" class="section">
+      <div class="glass">
+        <h2 class="section-title">Game Showcase</h2>
+        <p class="section-desc">Games I play regularly — hours pulled live from Steam where available.</p>
+        <div class="grid-cards">
+
+          <article class="game-card" data-appid="381210">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/dbd.jpg');"></div>
+            <div class="card-body">
+              <h3>Dead by Daylight</h3>
+              <i>Love-hate relationship. BHVR FTLOG fix your stuff.</i>
+              <p class="playtime">Loading...</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Dead-by-Daylight/">More</a>
+                <a class="mini-btn" href="https://deadbystats.eu/profile/rensora">Stats</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/val.jpg');"></div>
+            <div class="card-body">
+              <h3>Valorant</h3>
+              <i>Used to grind this hard, now I can't quit because of the money spent...</i>
+              <p>Currently: 1.9k hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Valorant/">More</a>
+                <a class="mini-btn" href="/games/Valorant/stats.html">Stats</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-appid="306130">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/teso.jpg');"></div>
+            <div class="card-body">
+              <h3>The Elder Scrolls Online</h3>
+              <i>Love this game, but playing less recently due to some issues.</i>
+              <p class="playtime">Loading...</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/The-Elder-Scrolls-Online/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/Galaxy_life.jpg');"></div>
+            <div class="card-body">
+              <h3>Galaxy Life</h3>
+              <i>Lost old account in the Facebook era. 3 planets, all Starbase Lvl5+.</i>
+              <p>Currently: 30 hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Galaxy-Life/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/gtav.jpg');"></div>
+            <div class="card-body">
+              <h3>GTA V</h3>
+              <i>Started from 0 on Enhanced — been a blast again!</i>
+              <p>Currently: ~2k hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/GTAV/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/hrtst.jpg');"></div>
+            <div class="card-body">
+              <h3>Hearthstone</h3>
+              <i>Across all my accounts I've met every type of player. Wild ride.</i>
+              <p>Currently: 5k hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Hearthstone/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/rivals.jpg');"></div>
+            <div class="card-body">
+              <h3>Marvel Rivals</h3>
+              <i>Started again recently — been a blast!</i>
+              <p>Currently: 71.3 hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Marvel-Rivals/">More</a>
+                <a class="mini-btn" href="https://tracker.gg/marvel-rivals/profile/ign/Rensora/overview">Stats</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/Ghost-Recon-Breakpoint.png');"></div>
+            <div class="card-body">
+              <h3>Ghost Recon Breakpoint</h3>
+              <i>From dying to rocks to fighting drones. What a game.</i>
+              <p>Currently: 70 hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Ghost-Recon-Breakpoint/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/Rogue-company.jpg');"></div>
+            <div class="card-body">
+              <h3>Rogue Company</h3>
+              <i>Finding a game without a cheater is like surviving Deathslingers.</i>
+              <p>Currently: 50 hours</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Rogue-company/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-appid="1808500">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/arcraiders.jpg');"></div>
+            <div class="card-body">
+              <h3>Arc Raiders</h3>
+              <i>Was sceptical at first, now fully hooked. Love meeting friendlies!</i>
+              <p class="playtime">Loading...</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Arc-Raiders/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-appid="3949040">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/rv.jpg');"></div>
+            <div class="card-body">
+              <h3>RV There Yet</h3>
+              <i>Can't stop laughing. Picking up and throwing friends is Rule #1.</i>
+              <p class="playtime">Loading...</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/RV-There-Yet/">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-appid="3527290">
+            <div class="card-thumb" style="background-image:url('assets/Game-Cards/peak.jpg');"></div>
+            <div class="card-body">
+              <h3>Peak</h3>
+              <i>I will bully my friends - even if it costs me my own life.</i>
+              <p class="playtime">Loading...</p>
+              <div class="card-actions">
+                <a class="mini-btn" href="/games/Peak/">More</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="glass footer-inner">
+      <p>© <span id="year"></span> Rensora - Built with 💜</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ── YEAR ── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── LOADER PARTICLES ── */
+    const container = document.getElementById('loaderParticles');
+    const colors = ['#ff4d6d','#7d3cff','#00d4ff'];
+    for (let i = 0; i < 30; i++) {
+      const el = document.createElement('div');
+      el.className = 'lp';
+      const size = Math.random() * 6 + 2;
+      el.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        animation-duration: ${Math.random() * 4 + 3}s;
+        animation-delay: ${Math.random() * 3}s;
+        filter: blur(${size > 5 ? 1 : 0}px);
+      `;
+      container.appendChild(el);
+    }
+
+    /* ── DISMISS LOADER ── */
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('fade-out');
+      }, 2000);
+    });
+
+    /* ── PARTICLE CANVAS BACKGROUND ── */
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const PARTICLE_COUNT = 70;
+    const COLORS = ['rgba(255,77,109,', 'rgba(125,60,255,', 'rgba(0,212,255,'];
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x:  Math.random() * window.innerWidth,
+        y:  Math.random() * window.innerHeight,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r:  Math.random() * 1.8 + 0.4,
+        c:  COLORS[Math.floor(Math.random() * COLORS.length)],
+        a:  Math.random() * 0.5 + 0.1,
+      });
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+
+      /* Draw connections */
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(125,60,255,${(1 - dist / 120) * 0.07})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      /* Draw dots */
+      for (const p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.c + p.a + ')';
+        ctx.fill();
+
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
+      }
+
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    /* ── PLAYTIME FETCH ── */
+    function formatHours(h) {
+      if (h === 'N/A') return 'N/A';
+      return h >= 1000 ? (h / 1000).toFixed(1) + 'k' : h;
+    }
+
+    document.querySelectorAll('.game-card[data-appid]').forEach(async card => {
+      const appid = card.getAttribute('data-appid');
+      const pTag  = card.querySelector('p');
+      if (!appid || !pTag) return;
+      try {
+        const res  = await fetch(`https://games-api.itsnielsje.workers.dev/?appid=${appid}`);
+        const data = await res.json();
+        pTag.textContent = `Currently: ${formatHours(data.playtime)} hours`;
+      } catch {
+        pTag.textContent = 'Currently: N/A';
+      }
+    });
+  </script>
+</body>
+</html>
