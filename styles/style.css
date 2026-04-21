@@ -445,49 +445,74 @@
     }
 
     /* ─── SPECS ─────────────────────────────────────────────────── */
-    .specs-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-top: 1.2rem;
-    }
+.specs-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  align-items: center;
+}
 
-    .spec-card {
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius-md);
-      padding: 1.2rem 0.8rem 1rem;
-      text-align: center;
-      transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
+/* ROW WRAPPER */
+.spec-row {
+  display: flex;
+  gap: 1rem;
+}
 
-    .spec-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,77,109,0.3);
-      box-shadow: 0 8px 24px rgba(255,77,109,0.12), 0 4px 12px rgba(125,60,255,0.12);
-    }
+/* TOP ROW (4 items) */
+.spec-row.top {
+  justify-content: center;
+}
 
-    .spec-card img {
-      width: 72px;
-      height: 72px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto 0.8rem;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
-      transition: transform 0.2s;
-    }
+/* BOTTOM ROW (3 items centered under top row) */
+.spec-row.bottom {
+  justify-content: center;
+}
 
-    .spec-card:hover img { transform: scale(1.08); }
+/* CARD */
+.spec-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 0.8rem 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 
-    .spec-card p {
-      font-size: 0.78rem;
-      font-weight: 600;
-      line-height: 1.3;
-      background: linear-gradient(90deg, var(--accent-r), var(--accent-p));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  width: 150px;
+}
+
+/* hover */
+.spec-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,77,109,0.3);
+  box-shadow: 0 8px 24px rgba(255,77,109,0.12), 0 4px 12px rgba(125,60,255,0.12);
+}
+
+/* image */
+.spec-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.8rem;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  transition: transform 0.2s;
+}
+
+.spec-card:hover img {
+  transform: scale(1.08);
+}
+
+/* text */
+.spec-card p {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  background: linear-gradient(90deg, var(--accent-r), var(--accent-p));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
     /* ─── GAME CARDS ────────────────────────────────────────────── */
     .grid-cards {
