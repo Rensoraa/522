@@ -203,7 +203,9 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -231,12 +233,12 @@ body {
   50%       { box-shadow: 0 0 22px var(--accent-r), 0 0 18px var(--accent-p); transform: scale(1.15); }
 }
 
-.menu { display: flex; gap: 0.5rem; align-items: center; }
+.menu { display: flex; gap: 0.25rem; align-items: center; margin-left: 0.2rem; }
 
 .menu-link {
   color: var(--muted);
   text-decoration: none;
-  padding: 0.4rem 0.9rem;
+  padding: 0.4rem 0.7rem;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
